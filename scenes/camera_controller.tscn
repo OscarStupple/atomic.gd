@@ -1,8 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://dm6hojk15htlf"]
+[gd_scene load_steps=4 format=3 uid="uid://dm6hojk15htlf"]
 
 [ext_resource type="Script" path="res://scripts/camera_controller.gd" id="1_qqgfn"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_onx5w"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_y8ap1"]
+viewport_path = NodePath("PitchPivot/Sprite3D/SubViewport")
 
 [node name="camera_controller" type="CharacterBody3D"]
 script = ExtResource("1_qqgfn")
@@ -16,3 +19,41 @@ disabled = true
 [node name="Camera3D" type="Camera3D" parent="PitchPivot"]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PitchPivot/Camera3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="PitchPivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.7)
+texture = SubResource("ViewportTexture_y8ap1")
+
+[node name="SubViewport" type="SubViewport" parent="PitchPivot/Sprite3D"]
+transparent_bg = true
+size = Vector2i(1280, 720)
+
+[node name="Panel" type="Panel" parent="PitchPivot/Sprite3D/SubViewport"]
+custom_minimum_size = Vector2(0, 50)
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -50.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="PitchPivot/Sprite3D/SubViewport/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.5
+offset_top = -11.5
+offset_right = 44.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "->
+1x"
+horizontal_alignment = 1
+vertical_alignment = 1

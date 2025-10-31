@@ -9,6 +9,9 @@ const rest_E := 1.50327761802 * pow(10,-10)
 var energy := 1.50327761802 * pow(10,-10)
 const c := 299792458
 
+var collision_info
+var lastV = Vector3(0,0,0)
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	mass = 1.67262192595 * pow(10,-27)
@@ -21,7 +24,15 @@ func _process(_delta: float) -> void:
 	
 	linear_velocity = linear_velocity + (acceleration * time)
 	
-	var collision_info = move_and_collide(linear_velocity*time)
+	if time == 0 and lastV == Vector3(0,0,0):
+		lastV = linear_velocity
+		linear_velocity = Vector3(0,0,0)
+	elif time != 0 and lastV != Vector3(0,0,0):
+		linear_velocity = lastV
+		lastV = Vector3(0,0,0)
+	
+	
+	collision_info = move_and_collide(linear_velocity*time)
 	
 	if collision_info != null:
 		for i in range(collision_info.get_collision_count()):

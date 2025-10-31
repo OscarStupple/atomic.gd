@@ -14,9 +14,15 @@ const c := 299792458
 var time := 0.007
 var last_time := 0.007
 
+var rng = RandomNumberGenerator.new()
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	for p in self.get_children():
+		if not(p.is_in_group("particles")):
+			continue
+		p.position = Vector3(round(rng.randf()*16-8),round(rng.randf()*16-8),round(rng.randf()*16-8))
+		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	for p1 in self.get_children():
@@ -39,7 +45,7 @@ func _process(_delta: float) -> void:
 				Fe = v * ((ke)*(-1*p1.charge*p2.charge)/(r*r)) * pow(sf,0.15)
 				Fm = p2.linear_velocity.cross(p1.linear_velocity.cross(v)) * ((ke/pow(c,2))*(-1*p1.charge*p2.charge)/(r*r)) * pow(sf,0.15)
 				if not(p1.is_in_group("lepton") or p2.is_in_group("lepton")) and r <= 2:
-					Fy = -v * ((-g2 * pow((1.602176634 * pow(10,-19)),2)) * ((pow(e,(-am * r/sf)) / (r * r))*sf*sf + (am * pow(e,(-am * r/sf)) / r)*sf)) /sf
+					Fy = -v * ((-g2 * pow((1.602176634 * pow(10,-19)),2)) * ((pow(e,(-am * r/sf)) / (r * r))*sf*sf + (am * pow(e,(-am * r/sf)) / r)*sf))/sf
 					#Fy = v * ((g2*((pow(e,(-1*(r/sf)*am)))/(r*r))*sf*sf)+(g2*((am*pow(e,(-1*(r/sf)*am)))/r)*sf))
 				else:
 					Fy = Vector3(0,0,0)

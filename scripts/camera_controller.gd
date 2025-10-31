@@ -7,12 +7,17 @@ var pitch_input := 0.0
 @onready var pitch_pivot: Node3D = $PitchPivot
 @onready var camera_3d: Camera3D = $PitchPivot/Camera3D
 @onready var animation_player: AnimationPlayer = $PitchPivot/Camera3D/AnimationPlayer
+@onready var label: Label = $PitchPivot/Sprite3D/SubViewport/Panel/Label
+
 
 const DEFAULT_SPEED = 8.0
 
 const ACCELERATION = 1.0
 var speed := 5.0
 var resistance := 5.0
+
+var time
+var mult
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -46,6 +51,18 @@ func _physics_process(_delta: float) -> void:
 	
 	twist_input = 0
 	pitch_input = 0
+	
+	# ui #
+	
+	time = self.get_parent().time
+	mult = abs(time)/0.007
+	if time > 0:
+		label.text = str("->\n", mult, "x")
+	elif time < 0:
+		label.text = str("<-\n", mult, "x")
+	else:
+		label.text = str("||\n", mult, "x")
+		
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
