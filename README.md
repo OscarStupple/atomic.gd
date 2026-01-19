@@ -16,8 +16,11 @@ Operation, Features, and Function:
 The program runs pairwise calculations of forces and sums the force vectors for each particle before determining the subsequent motion.
 
 The fundamental forces of this simulation are:
+
 Electromagnetism – via the Lorentz force
+
 Residential Nuclear force – via the Yukawa potential
+
 Gravity – via General Universal Gravitation
 
 Later releases include hadronic particle interactions.
