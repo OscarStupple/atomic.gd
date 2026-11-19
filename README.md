@@ -73,7 +73,7 @@ These behaviours are particularly interesting as they emerge from the underlying
 
 ## Inspiration and Further Reading
 
-This project was inspired in part by [particle.js](https://github.com/andre-nepomuceno/particle.js) by Andre Nepomuceno.
+This project was inspired in part by [particle.js](https://github.com/andrenepomuceno/particle.js) by Andre Nepomuceno.
 
 Its approach to particle-based simulation helped inform the structure and visual direction of this project. It is also an impressive and visually interesting piece of work in its own right.
 
