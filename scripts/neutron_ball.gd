@@ -4,7 +4,7 @@ const sf := 2.562831446 * pow(10,14)
 var resultant_force := Vector3(0,0,0)
 var acceleration := Vector3(0,0,0)
 const charge := 0.0
-var time := 0.007
+var time := 0.5
 const rest_E := 1.50534976514 * pow(10,-10)
 var energy := 1.50534976514 * pow(10,-10)
 

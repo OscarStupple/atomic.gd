@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-var mouse_sensitivity := 0.001
+var mouse_sensitivity := 0.002
 var twist_input := 0.0
 var pitch_input := 0.0
 
@@ -55,7 +55,7 @@ func _physics_process(_delta: float) -> void:
 	# ui #
 	
 	time = self.get_parent().time
-	mult = abs(time)/0.007
+	mult = abs(time)
 	if time > 0:
 		label.text = str("->\n", mult, "x")
 	elif time < 0:

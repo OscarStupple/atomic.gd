@@ -1,6 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://clsnldmmil36h"]
+[gd_scene format=3 uid="uid://clsnldmmil36h"]
 
-[ext_resource type="Script" path="res://scripts/universe.gd" id="1_1e5h0"]
+[ext_resource type="Script" uid="uid://kcq4lo8bsbee" path="res://scripts/universe.gd" id="1_1e5h0"]
 [ext_resource type="PackedScene" uid="uid://dm6hojk15htlf" path="res://scenes/camera_controller.tscn" id="2_yaus5"]
 [ext_resource type="PackedScene" uid="uid://b627c4pjpxrmv" path="res://scenes/proton_ball.tscn" id="4_kf307"]
 [ext_resource type="PackedScene" uid="uid://blmu00naru40x" path="res://scenes/neutron_ball.tscn" id="4_vfkla"]
@@ -20,523 +20,523 @@ albedo_color = Color(0, 0, 1, 1)
 emission_enabled = true
 emission = Color(0, 0, 1, 1)
 
-[node name="Universe" type="Node3D"]
+[node name="Universe" type="Node3D" unique_id=1644120701]
 script = ExtResource("1_1e5h0")
 
-[node name="camera_controller" parent="." instance=ExtResource("2_yaus5")]
+[node name="camera_controller" parent="." unique_id=12738494 instance=ExtResource("2_yaus5")]
 transform = Transform3D(1, 0, -1.49012e-08, 0, 1, 0, 1.49012e-08, 0, 1, 0, 0, 5)
 
-[node name="y-axis" type="CSGCylinder3D" parent="."]
+[node name="y-axis" type="CSGCylinder3D" parent="." unique_id=1790940224]
 radius = 0.01
 height = 1000.0
 sides = 3
 material = SubResource("StandardMaterial3D_wg0lr")
 
-[node name="x-axis" type="CSGCylinder3D" parent="."]
+[node name="x-axis" type="CSGCylinder3D" parent="." unique_id=958483767]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
 radius = 0.01
 height = 1000.0
 sides = 3
 material = SubResource("StandardMaterial3D_urn8j")
 
-[node name="z-axis" type="CSGCylinder3D" parent="."]
+[node name="z-axis" type="CSGCylinder3D" parent="." unique_id=275247964]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 radius = 0.01
 height = 1000.0
 sides = 3
 material = SubResource("StandardMaterial3D_dspl3")
 
-[node name="proton_ball" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball" parent="." unique_id=880581248 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball" parent="." unique_id=2060976902 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball2" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball2" parent="." unique_id=735757696 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball2" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball2" parent="." unique_id=63374133 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball3" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball3" parent="." unique_id=1719842409 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball3" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball3" parent="." unique_id=2029790533 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball4" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball4" parent="." unique_id=1020419874 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball4" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball4" parent="." unique_id=1806646995 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball5" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball5" parent="." unique_id=1405068764 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball5" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball5" parent="." unique_id=2058796267 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball6" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball6" parent="." unique_id=934375894 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball6" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball6" parent="." unique_id=781086616 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball7" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball7" parent="." unique_id=847103241 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball7" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball7" parent="." unique_id=1635377225 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball8" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball8" parent="." unique_id=273267948 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball8" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball8" parent="." unique_id=442846340 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball9" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball9" parent="." unique_id=1779276346 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball9" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball9" parent="." unique_id=1454818581 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball10" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball10" parent="." unique_id=830927695 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball10" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball10" parent="." unique_id=644966711 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball11" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball11" parent="." unique_id=625610415 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball11" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball11" parent="." unique_id=1546191999 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball12" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball12" parent="." unique_id=1856900276 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball12" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball12" parent="." unique_id=831975955 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball13" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball13" parent="." unique_id=2033637553 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball13" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball13" parent="." unique_id=1534423743 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball14" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball14" parent="." unique_id=1405524188 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball14" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball14" parent="." unique_id=1222911355 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball15" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball15" parent="." unique_id=868593637 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball15" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball15" parent="." unique_id=899225537 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball16" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball16" parent="." unique_id=1437373464 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball16" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball16" parent="." unique_id=888468458 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball17" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball17" parent="." unique_id=2080352639 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball17" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball17" parent="." unique_id=1163119769 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball18" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball18" parent="." unique_id=285359471 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball18" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball18" parent="." unique_id=993302775 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball19" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball19" parent="." unique_id=2143743562 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball19" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball19" parent="." unique_id=961976891 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball20" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball20" parent="." unique_id=1433206306 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball20" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball20" parent="." unique_id=1761766191 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball21" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball21" parent="." unique_id=936053470 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball21" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball21" parent="." unique_id=907539094 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball22" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball22" parent="." unique_id=1265364621 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball22" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball22" parent="." unique_id=727580117 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball23" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball23" parent="." unique_id=2014205162 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball23" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball23" parent="." unique_id=995172645 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball24" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball24" parent="." unique_id=753109664 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball24" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball24" parent="." unique_id=1905645099 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball25" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball25" parent="." unique_id=2041802491 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball25" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball25" parent="." unique_id=2146268832 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball26" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball26" parent="." unique_id=747734028 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball26" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball26" parent="." unique_id=46025289 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball27" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball27" parent="." unique_id=747373282 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball27" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball27" parent="." unique_id=48887600 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball28" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball28" parent="." unique_id=2120163399 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball28" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball28" parent="." unique_id=2061719502 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball29" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball29" parent="." unique_id=1668359823 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball29" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball29" parent="." unique_id=581520541 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball30" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball30" parent="." unique_id=1660869851 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball30" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball30" parent="." unique_id=1273248871 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball31" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball31" parent="." unique_id=1042945485 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball31" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball31" parent="." unique_id=547659615 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball32" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball32" parent="." unique_id=2009871551 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball32" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball32" parent="." unique_id=29502492 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball33" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball33" parent="." unique_id=1245682151 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball33" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball33" parent="." unique_id=1813756707 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball34" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball34" parent="." unique_id=1023893314 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball34" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball34" parent="." unique_id=1739808925 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball35" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball35" parent="." unique_id=670194068 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball35" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball35" parent="." unique_id=1342004277 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball36" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball36" parent="." unique_id=968510299 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball36" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball36" parent="." unique_id=2135113604 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball37" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball37" parent="." unique_id=688208165 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball37" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball37" parent="." unique_id=498198938 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball38" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball38" parent="." unique_id=67695588 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball38" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball38" parent="." unique_id=1576561115 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball39" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball39" parent="." unique_id=1367067734 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball39" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball39" parent="." unique_id=1312259207 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball40" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball40" parent="." unique_id=134114164 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball40" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball40" parent="." unique_id=310608281 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball41" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball41" parent="." unique_id=1551643426 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball41" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball41" parent="." unique_id=1534603961 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball42" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball42" parent="." unique_id=330043515 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball42" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball42" parent="." unique_id=1854187512 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball43" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball43" parent="." unique_id=1320556279 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball43" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball43" parent="." unique_id=340570169 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball44" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball44" parent="." unique_id=2065648529 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball44" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball44" parent="." unique_id=1618145826 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball45" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball45" parent="." unique_id=854364191 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball45" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball45" parent="." unique_id=122064688 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball46" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball46" parent="." unique_id=999272986 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball46" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball46" parent="." unique_id=507384032 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball47" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball47" parent="." unique_id=1257884668 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball47" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball47" parent="." unique_id=622507848 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball48" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball48" parent="." unique_id=2037743186 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball48" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball48" parent="." unique_id=20558091 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball49" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball49" parent="." unique_id=192950607 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball49" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball49" parent="." unique_id=1613951290 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball50" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball50" parent="." unique_id=1914073782 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball50" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball50" parent="." unique_id=1412424951 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball51" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball51" parent="." unique_id=1272837561 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball51" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball51" parent="." unique_id=1434133063 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball52" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball52" parent="." unique_id=1353552568 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball52" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball52" parent="." unique_id=1740636511 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball53" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball53" parent="." unique_id=1528052930 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball53" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball53" parent="." unique_id=1448630639 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball54" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball54" parent="." unique_id=197070867 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball54" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball54" parent="." unique_id=848807384 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball55" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball55" parent="." unique_id=1057598301 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball55" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball55" parent="." unique_id=824746178 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball56" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball56" parent="." unique_id=1482552049 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball56" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball56" parent="." unique_id=1431791885 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball57" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball57" parent="." unique_id=2126975877 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball57" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball57" parent="." unique_id=539082743 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball58" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball58" parent="." unique_id=623439120 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball58" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball58" parent="." unique_id=1434166476 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball59" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball59" parent="." unique_id=667145982 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball59" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball59" parent="." unique_id=1958730600 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball60" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball60" parent="." unique_id=1792142773 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball60" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball60" parent="." unique_id=938761692 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball61" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball61" parent="." unique_id=722587371 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball61" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball61" parent="." unique_id=288364633 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball62" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball62" parent="." unique_id=235314307 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball62" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball62" parent="." unique_id=2067565297 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball63" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball63" parent="." unique_id=529031992 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball63" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball63" parent="." unique_id=847863498 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball64" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball64" parent="." unique_id=586273098 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball64" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball64" parent="." unique_id=2083994071 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball65" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball65" parent="." unique_id=431771733 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball65" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball65" parent="." unique_id=680057530 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball66" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball66" parent="." unique_id=1220636501 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball66" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball66" parent="." unique_id=240298930 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball67" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball67" parent="." unique_id=1441871456 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball67" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball67" parent="." unique_id=2045126630 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball68" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball68" parent="." unique_id=858536358 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball68" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball68" parent="." unique_id=1508605881 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball69" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball69" parent="." unique_id=1990174152 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball69" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball69" parent="." unique_id=241717069 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball70" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball70" parent="." unique_id=1388228935 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball70" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball70" parent="." unique_id=2108698874 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball71" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball71" parent="." unique_id=645730665 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball71" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball71" parent="." unique_id=330948048 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball72" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball72" parent="." unique_id=684491987 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball72" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball72" parent="." unique_id=2061893384 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball73" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball73" parent="." unique_id=451482925 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball73" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball73" parent="." unique_id=1874502278 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball74" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball74" parent="." unique_id=936206074 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball74" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball74" parent="." unique_id=1869604525 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball75" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball75" parent="." unique_id=277975165 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball75" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball75" parent="." unique_id=1559476947 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball76" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball76" parent="." unique_id=1145520752 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball76" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball76" parent="." unique_id=1071292053 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball77" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball77" parent="." unique_id=51316033 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball77" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball77" parent="." unique_id=613986394 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball78" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball78" parent="." unique_id=517238786 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball78" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball78" parent="." unique_id=1024315299 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball79" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball79" parent="." unique_id=2033591500 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball79" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball79" parent="." unique_id=1574479561 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball80" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball80" parent="." unique_id=1868671065 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball80" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball80" parent="." unique_id=1400827239 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball81" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball81" parent="." unique_id=1553265292 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball81" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball81" parent="." unique_id=894329058 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball82" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball82" parent="." unique_id=1398290827 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball82" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball82" parent="." unique_id=261906945 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball83" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball83" parent="." unique_id=1735977289 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball83" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball83" parent="." unique_id=1375454071 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball84" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball84" parent="." unique_id=25435790 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball84" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball84" parent="." unique_id=191457091 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball85" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball85" parent="." unique_id=198380585 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball85" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball85" parent="." unique_id=1347987502 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball86" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball86" parent="." unique_id=1168361911 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball86" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball86" parent="." unique_id=1168402723 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball87" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball87" parent="." unique_id=957872614 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball87" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball87" parent="." unique_id=442786548 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball88" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball88" parent="." unique_id=1266984656 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball88" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball88" parent="." unique_id=909728304 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball89" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball89" parent="." unique_id=1781026688 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball89" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball89" parent="." unique_id=1148480873 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball90" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball90" parent="." unique_id=1740986681 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball90" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball90" parent="." unique_id=1273168494 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball91" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball91" parent="." unique_id=2057814650 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball91" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball91" parent="." unique_id=583567298 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball92" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball92" parent="." unique_id=1640363753 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball92" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball92" parent="." unique_id=1672018796 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball93" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball93" parent="." unique_id=317568401 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball93" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball93" parent="." unique_id=1276156184 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball94" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball94" parent="." unique_id=1690814462 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball94" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball94" parent="." unique_id=1302890611 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball95" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball95" parent="." unique_id=165570370 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball95" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball95" parent="." unique_id=1267180053 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball96" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball96" parent="." unique_id=650960041 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball96" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball96" parent="." unique_id=845957477 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball97" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball97" parent="." unique_id=1223182377 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball97" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball97" parent="." unique_id=1458800117 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball98" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball98" parent="." unique_id=1749049060 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball98" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball98" parent="." unique_id=2097648714 instance=ExtResource("4_vfkla")]
 
-[node name="proton_ball99" parent="." instance=ExtResource("4_kf307")]
+[node name="proton_ball99" parent="." unique_id=1347576701 instance=ExtResource("4_kf307")]
 linear_velocity = Vector3(0, 0, 1)
 
-[node name="neutron_ball99" parent="." instance=ExtResource("4_vfkla")]
+[node name="neutron_ball99" parent="." unique_id=534903493 instance=ExtResource("4_vfkla")]

@@ -1,6 +1,6 @@
 # Atomic-Scale Pairwise Simulation
 
-An atomic-scale, pairwise N-body classical physics simulation of (almost) all fundamental forces, developed in the [Godot Engine](https://godotengine.org/).
+An atomic-scale, pairwise N-body classical physics simulation of (almost) all fundamental forces, developed in the [Godot Engine](https://godotengine.org/) v4.7.2.
 
 This project is the first instalment in a series of simulations exploring the behaviour of matter at increasingly small scales. The long-term objective is to develop an accurate, computationally powerful model capable of exploring the underlying interactions and emergent behaviours of subatomic particles.
 
@@ -86,5 +86,5 @@ While I'm enthusiastic about beginning work on the next iteration, there is stil
 ### Planned Improvements
 
 - [ ] Code cleanup and refactoring
-- [ ] Optimisation of pairwise calculations
+- [x] Optimisation of pairwise calculations
 - [ ] Fix and validate reverse-time functionality

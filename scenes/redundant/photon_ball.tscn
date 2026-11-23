@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://cib7swse62t5c"]
+[gd_scene format=3 uid="uid://cib7swse62t5c"]
 
-[ext_resource type="Script" path="res://scripts/photon_ball.gd" id="1_1e0vc"]
+[ext_resource type="Script" uid="uid://c2vwylp5mafaa" path="res://scripts/redundant/photon_ball.gd" id="1_1e0vc"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_lcm74"]
 radius = 0.01

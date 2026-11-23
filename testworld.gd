@@ -1,0 +1,85 @@
+extends Node3D
+
+# Godot's inbuilt dimesnsions are reffered to as au (arbitrary units)
+# 0.001 au is the smallest length
+
+const pi := 3.1415926535897932384626433
+const e := 2.7182818284590452353602875
+const sf := 2.562831446 * pow(10,14) #scale factor : m * sf = au
+const G := 6.6740831 * pow(10,-11)
+const ke := 8987551787
+const g2 := 1*pow(e,-5) #55*pi
+const am := 3.333333333*pow(10,14) / sf #7.073058607*pow(10,15)
+const c := 299792458
+#const lp := 1.61622938 * pow(10,-35)
+#const tp := 5.3911613 * pow(10,-44)
+var time := 0.5
+var last_time :=0.5
+
+var rng = RandomNumberGenerator.new()
+
+var children := []
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	children = self.get_children()
+	for p in children:
+		if not(p.is_in_group("particles")):
+			continue
+		p.position = Vector3(round(rng.randf()*16-8),round(rng.randf()*16-8),round(rng.randf()*16-8))
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta: float) -> void:
+	# Loop through all pairs of particles
+	for i1 in range(len(children)):
+		var p1 = children[i1]
+		if not(p1.is_in_group("particles")):
+			continue
+		for i2 in range(i1+1,len(children)):
+			var p2 = children[i2]
+			if not(p2.is_in_group("particles")):
+				continue
+			
+			var v := Vector3(p2.position.x - p1.position.x, p2.position.y - p1.position.y, p2.position.z - p1.position.z)
+			var r := v.length()
+			# r = r/sf
+			v = v.normalized()
+			var Fg := Vector3()
+			var Fe := Vector3()
+			var Fy := Vector3()
+			var Fm := Vector3()
+			
+			#Fg = v * ((G)*(p1.mass*p2.mass* sf * sf)/(r*r))
+			Fg = v * ((G)*((p1.energy/pow(c,2)*sf)*(p2.energy/pow(c,2))*sf)/(r*r))
+			
+			Fe = v * ((ke)*(-1*p1.charge*p2.charge)/(r*r)) * pow(sf,0.15)
+			
+			Fm = p2.linear_velocity.cross(p1.linear_velocity.cross(v)) * ((ke/pow(c,2))*(-1*p1.charge*p2.charge)/(r*r)) * pow(sf,0.15)
+			
+			if not(p1.is_in_group("lepton") or p2.is_in_group("lepton")) and r <= 2:
+				Fy = -v * ((-g2 * pow((1.602176634 * pow(10,-19)),2)) * ((pow(e,(-am * r/sf)) / (r * r))*sf*sf + (am * pow(e,(-am * r/sf)) / r)*sf))/sf
+				#Fy = v * ((g2*((pow(e,(-1*(r/sf)*am)))/(r*r))*sf*sf)+(g2*((am*pow(e,(-1*(r/sf)*am)))/r)*sf))
+			else:
+				Fy = Vector3(0,0,0)
+			#print(Fg)
+			#print(Fe)
+			#print(Fm)
+			#print(Fy)
+			p1.resultant_force = p1.resultant_force + Fg + Fe + Fy + Fm
+			p2.resultant_force = p1.resultant_force - Fg - Fe - Fy - Fm
+	
+	if Input.is_action_just_pressed("time_scale_up"):
+		time *= 2
+	if Input.is_action_just_pressed("time_scale_down"):
+		time /= 2
+	if Input.is_action_just_pressed("time_forward"):
+		time = abs(time)
+	if Input.is_action_just_pressed("time_reverse"):
+		time = -1*abs(time)
+	if Input.is_action_just_pressed("time_pause"):
+		if time != 0:
+			last_time = time
+			time = 0
+		else:
+			time = last_time

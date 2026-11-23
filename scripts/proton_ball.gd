@@ -4,7 +4,7 @@ const sf := 2.562831446 * pow(10,14)
 var resultant_force := Vector3(0,0,0)
 var acceleration := Vector3(0,0,0)
 const charge := 1.602176634 * pow(10,-19)
-var time := 0.007
+var time := 0.5
 const rest_E := 1.50327761802 * pow(10,-10)
 var energy := 1.50327761802 * pow(10,-10)
 const c := 299792458
@@ -17,12 +17,12 @@ func _ready() -> void:
 	mass = 1.67262192595 * pow(10,-27)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
 	time = self.get_parent().time
 	if mass != 0.0:
 		acceleration = resultant_force / mass
 	
-	linear_velocity = linear_velocity + (acceleration * time)
+	linear_velocity = linear_velocity + (acceleration*delta*time)
 	
 	if time == 0 and lastV == Vector3(0,0,0):
 		lastV = linear_velocity
@@ -32,7 +32,7 @@ func _process(_delta: float) -> void:
 		lastV = Vector3(0,0,0)
 	
 	
-	collision_info = move_and_collide(linear_velocity*time)
+	collision_info = move_and_collide(linear_velocity*delta*time)
 	
 	if collision_info != null:
 		for i in range(collision_info.get_collision_count()):
